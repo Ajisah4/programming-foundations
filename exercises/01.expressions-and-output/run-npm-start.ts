@@ -4,7 +4,7 @@ import { spawnSync } from 'node:child_process'
 export function getNpmStartOutput() {
 	const result = spawnSync('npm', ['start', '--silent'], {
 		encoding: 'utf8',
-		shell: process.platform === 'win32',
+		shell: true,
 	})
 
 	if (result.error) {
