@@ -1,9 +1,27 @@
 import assert from 'node:assert/strict'
+import { spawnSync } from 'node:child_process'
 import { test } from 'node:test'
 
-import { getNpmStartOutput } from '../run-npm-start.ts'
+function getOutput() {
+	const result = spawnSync('npm', ['start', '--silent'], {
+		encoding: 'utf8',
+		shell: true,
+	})
 
-const output = getNpmStartOutput()
+	if (result.error) {
+		throw result.error
+	}
+
+	assert.strictEqual(
+		result.status,
+		0,
+		result.stderr || '🚨 Running the program failed',
+	)
+
+	return result.stdout.replace(/\r\n/g, '\n')
+}
+
+const output = getOutput()
 const lines = output
 	.split('\n')
 	.map((line) => line.trim())
