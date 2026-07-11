@@ -1,23 +1,25 @@
 // Understanding Reassignment vs Mutation
 
 // This object is declared with const
-const person = { name: 'Alice', age: 30, city: 'Seattle' }
+const person = { name: 'Alice', age: 30, city: 'Seattle' };
 
-console.log('Original person:', person)
+console.log('Original person:', person);
 
 // 🐨 Try to reassign person to a new object:
 // person = { name: 'Bob', age: 25, city: 'Portland' }
 // 💣 Uncomment the line above and see the TypeScript error
 
 // 🐨 Now try MUTATING the object by changing the age property
+person.age = 25;
 
 // 🐨 Mutate again by changing the city
+person.city = 'Portland';
 
-console.log('Modified person:', person)
+console.log('Modified person:', person);
 
 // 🦉 Key insight: const prevents reassignment, not mutation!
 // The variable person always points to the SAME object,
 // but the properties of that object can change.
 
 // 🐨 Export your variable so we can verify your work
-// export { person }
+export { person };
