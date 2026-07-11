@@ -9,4 +9,4 @@ console.log("Ajith" + " " + "Ramachandran");
 
 // 🐨 Log a sentence by concatenating multiple strings
 // 💰 Build the sentence from small pieces and include spaces where needed
-console.log("I" + " am" + " learning" + " TypeScript" + " today.");
+console.log("I" + " am" + " learning" + " to" + " code");
