@@ -10,13 +10,15 @@ let seatChart: string = ""
 // 🐨 Use nested for loops to build the seating chart
 for (let i = 0; i < rows.length; i++) {
   for (let j = 1; j <= seatsPerRow; j++) {
-    seatChart += `${rows[i]}${j} `
+    seatChart += `${rows[i]}${j}`
+
+    if (j < seatsPerRow) {
+      seatChart += " "
+    }
   }
+
   seatChart += "\n"
 }
-
-// Remove extra space and newline at the end
-seatChart = seatChart.trim()
 
 console.log(seatChart)
 
