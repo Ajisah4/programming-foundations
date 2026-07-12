@@ -10,9 +10,6 @@ for (let i = 1; i <= 5; i++) {
   exhibitLabels += `Exhibit ${i}\n`
 }
 
-// Remove the extra newline at the end
-exhibitLabels = exhibitLabels.trim()
-
 console.log(exhibitLabels)
 
 // 🐨 Export your variable so we can verify your work
