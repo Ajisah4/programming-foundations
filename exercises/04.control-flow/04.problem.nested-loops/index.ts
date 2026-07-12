@@ -5,12 +5,20 @@ const rows = ['A', 'B', 'C']
 const seatsPerRow = 4
 
 // 🐨 Create a variable `seatChart` starting as an empty string
+let seatChart: string = ""
 
 // 🐨 Use nested for loops to build the seating chart
-// 🐨 Each row should include seat labels like "A1 A2 A3 A4"
-// 🐨 Put each row on its own line using "\n"
+for (let i = 0; i < rows.length; i++) {
+  for (let j = 1; j <= seatsPerRow; j++) {
+    seatChart += `${rows[i]}${j} `
+  }
+  seatChart += "\n"
+}
 
-// console.log(seatChart)
+// Remove extra space and newline at the end
+seatChart = seatChart.trim()
+
+console.log(seatChart)
 
 // 🐨 Export your variable so we can verify your work
-// export { seatChart }
+export { seatChart }

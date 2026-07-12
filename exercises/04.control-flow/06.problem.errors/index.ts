@@ -7,12 +7,23 @@ let resultMessage = ''
 let hadError = false
 
 // 🐨 Use a try/catch block to convert rawInput to a number
-// - Inside try, create parsedValue with Number(rawInput)
-// - If Number.isNaN(parsedValue), throw a new Error with message `Invalid number: ${rawInput}`
-// - If it succeeds, set resultMessage to `Parsed value: ${parsedValue}`
-// - If it throws, set hadError to true and resultMessage to `Error: ${message}`
+try {
+  const parsedValue = Number(rawInput)
 
-// console.log(resultMessage)
+  if (Number.isNaN(parsedValue)) {
+    throw new Error(`Invalid number: ${rawInput}`)
+  }
+
+  resultMessage = `Parsed value: ${parsedValue}`
+} catch (error) {
+  hadError = true
+
+  if (error instanceof Error) {
+    resultMessage = `Error: ${error.message}`
+  }
+}
+
+console.log(resultMessage)
 
 // 🐨 Export resultMessage and hadError so we can verify your work
-// export { resultMessage, hadError }
+export { resultMessage, hadError }

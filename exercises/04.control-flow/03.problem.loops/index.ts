@@ -2,12 +2,18 @@
 // Using a for loop to build a numbered list
 
 // 🐨 Create a variable `exhibitLabels` starting as an empty string
+let exhibitLabels: string = ""
 
 // 🐨 Write a for loop that counts from 1 to 5
-// 🐨 On each pass, add a line like "Exhibit 1" to the string
-// 🐨 Put each label on its own line using "\n"
+for (let i = 1; i <= 5; i++) {
+  // 🐨 On each pass, add a line like "Exhibit 1" to the string
+  exhibitLabels += `Exhibit ${i}\n`
+}
 
-// console.log(exhibitLabels)
+// Remove the extra newline at the end
+exhibitLabels = exhibitLabels.trim()
+
+console.log(exhibitLabels)
 
 // 🐨 Export your variable so we can verify your work
-// export { exhibitLabels }
+export { exhibitLabels }
