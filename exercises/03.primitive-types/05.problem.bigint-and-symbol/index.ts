@@ -1,26 +1,35 @@
 // BigInt and Symbol
-// Less common but important primitive types
 
-// 🐨 Create a bigint variable `largeNumber` with the value 9007199254740993n
-// This is larger than Number.MAX_SAFE_INTEGER!
+// 🐨 Create a bigint variable `largeNumber`
+const largeNumber = 9007199254740991n
 
-// 🐨 Create another bigint `anotherLarge` with value 1000000000000000000n
+// 🐨 Create another bigint variable `anotherLarge`
+const anotherLarge = 1000000000000000n
 
-// 🐨 Add them together into a variable called `sum`
+// 🐨 Add them together
+const sum = largeNumber + anotherLarge
 
-// 🐨 Create a symbol called `userId` with description 'user-id'
+// 🐨 Create two symbols with the same description
+const userId = Symbol('user')
+const anotherId = Symbol('user')
 
-// 🐨 Create another symbol called `anotherId` with the same description 'user-id'
+// 🐨 Compare the symbols
+const areEqual = userId === anotherId
 
-// 🐨 Create a variable `areEqual` that compares userId === anotherId
-// This will be false because each Symbol() call creates a unique value!
-
-// Test - uncomment when ready
-// console.log('Large number:', largeNumber)
-// console.log('Sum of bigints:', sum)
-// console.log('userId:', userId)
-// console.log('anotherId:', anotherId)
-// console.log('Are symbols equal?', areEqual) // false
+// ✅ Verification
+console.log('Large Number:', largeNumber)
+console.log('Another Large:', anotherLarge)
+console.log('Sum:', sum)
+console.log('User ID:', userId)
+console.log('Another ID:', anotherId)
+console.log('Are Equal:', areEqual)
 
 // 🐨 Export your variables so we can verify your work
-// export { largeNumber, anotherLarge, sum, userId, anotherId, areEqual }
+export {
+  largeNumber,
+  anotherLarge,
+  sum,
+  userId,
+  anotherId,
+  areEqual,
+}
