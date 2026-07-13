@@ -3,7 +3,9 @@
 
 // 🐨 Create a function named `getMessage` that returns "Hello, functions!"
 // Make sure to add an explicit return type of string.
-
+function getMessage(): string {
+  return "Hello, functions!";
+}
 // ✅ Test your function
 // console.log(getMessage()) // "Hello, functions!"
 
