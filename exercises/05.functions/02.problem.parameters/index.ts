@@ -1,24 +1,12 @@
 // E-commerce Utility Functions
 // Creating functions with typed parameters and return values
-
-// 🐨 Create a function `calculateTax` that:
-// - Takes `amount` (number) and `rate` (number)
-// - Returns the tax amount (amount * rate)
 function calculateTax(amount: number, rate: number): number {
     return amount * rate;
 }
-
-// 🐨 Create a function `formatPrice` that:
-// - Takes `cents` (number)
-// - Returns a formatted dollar string like "$19.99"
 function formatPrice (cents: number): string {
     const dollars = cents / 100;
-    return $${dollars.toFixed(2)};
+    return `$${dollars.toFixed(2)}`;
 }
-
-// 🐨 Create a function `applyDiscount` that:
-// - Takes `price` (number) and `discountPercent` (number)
-// - Returns the discounted price
 function applyDiscount(price: number, discountpercent: number): number {
     const discountAmount = price * (discountpercent / 100);
     return price - discountAmount;
