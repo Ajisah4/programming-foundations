@@ -1,33 +1,43 @@
 // JSDoc Documentation
 // Writing documentation comments that enhance IDE support and code clarity
 
-// 🐨 Add a JSDoc comment above this function that includes:
-// - A description of what the function does
-// - @param tag documenting the `a` parameter
-// - @param tag documenting the `b` parameter
-// - @returns tag documenting what the function returns
-// 💰 JSDoc uses a block comment that starts with /**
+/**
+ * Adds two numbers together.
+ *
+ * @param a - The first number.
+ * @param b - The second number.
+ * @returns The sum of the two numbers.
+ */
 function add(a: number, b: number): number {
 	return a + b
 }
 
-// 🐨 Add a JSDoc comment for this function that includes:
-// - A description
-// - @param tag for the `name` parameter
-// - @returns tag
-// - @example tag showing how to use the function
-// 💰 Include an @example block that shows how to call the function
+/**
+ * Creates a greeting message for a person.
+ *
+ * @param name - The name of the person to greet.
+ * @returns A greeting message.
+ *
+ * @example
+ * greet("Alice")
+ * // Returns: "Hello, Alice!"
+ */
 function greet(name: string): string {
 	return `Hello, ${name}!`
 }
 
-// 🐨 Add a JSDoc comment for this function that includes:
-// - A description explaining what the function calculates
-// - @param tag for `principal` (the initial amount)
-// - @param tag for `rate` (annual interest rate as decimal)
-// - @param tag for `years` (number of years)
-// - @returns tag explaining the result
-// - @example tag showing typical usage
+/**
+ * Calculates the compound interest amount after a given number of years.
+ *
+ * @param principal - The initial amount of money.
+ * @param rate - The annual interest rate as a decimal.
+ * @param years - The number of years the money is invested.
+ * @returns The final amount after compound interest.
+ *
+ * @example
+ * calculateCompoundInterest(1000, 0.05, 10)
+ * // Returns: 1628.894626777442
+ */
 function calculateCompoundInterest(
 	principal: number,
 	rate: number,
@@ -36,11 +46,21 @@ function calculateCompoundInterest(
 	return principal * Math.pow(1 + rate, years)
 }
 
-// 🐨 Create a function called `clamp` that:
-// - Takes a value, min, and max
-// - Returns the value constrained between min and max
-// - Has a complete JSDoc comment with description, @param, @returns, and @example
-// 💰 Use Math.min/Math.max to keep the value within range
+/**
+ * Constrains a value between a minimum and maximum.
+ *
+ * @param value - The value to clamp.
+ * @param min - The minimum allowed value.
+ * @param max - The maximum allowed value.
+ * @returns The clamped value.
+ *
+ * @example
+ * clamp(15, 0, 10)
+ * // Returns: 10
+ */
+function clamp(value: number, min: number, max: number): number {
+	return Math.max(min, Math.min(value, max))
+}
 
 // 🐨 Export your functions so we can verify your work
-// export { add, greet, calculateCompoundInterest, clamp }
+export { add, greet, calculateCompoundInterest, clamp }
